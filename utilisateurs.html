@@ -1,6 +1,6 @@
 <!DOCTYPE html>
 <html lang="en">
-    
+
 
 <head>
         <meta charset="utf-8">
@@ -8,7 +8,7 @@
         <meta name="description" content="">
         <meta name="author" content="">
 
-        <title>Liste des réservations</title>
+        <title>BIGDIG admin</title>
 
         <link href="css/style.default.css" rel="stylesheet">
         <link href="css/select2.css" rel="stylesheet" />
@@ -28,7 +28,8 @@
             <div class="headerwrapper">
                 <div class="header-left">
                     <a href="index.html" class="logo">
-                        <img src="images/minilogo1.png" alt="" /> 
+                        <!--<img src="images/minilogo1.png" alt="" /> -->
+                        <p style="color:white;">BIGDIG</p>
                     </a>
                     <div class="pull-right">
                         <a href="#" class="menu-collapse">
@@ -81,9 +82,9 @@
                               <i class="fa fa-caret-down"></i>
                             </button>
                             <ul class="dropdown-menu pull-right" role="menu">
-                              <li><a href="#"><i class="glyphicon glyphicon-user"></i> Afficher mon profil</a></li>
+                              <li><a href="profil.html"><i class="glyphicon glyphicon-user"></i> Afficher mon profil</a></li>
                               <li class="divider"></li>
-                              <li><a href="#"><i class="glyphicon glyphicon-log-out"></i>Déconnexion</a></li>
+                              <li><a href="signin.html"><i class="glyphicon glyphicon-log-out"></i>Déconnexion</a></li>
                             </ul>
                         </div><!-- btn-group -->
                         
@@ -94,60 +95,45 @@
             </div><!-- headerwrapper -->
         </header>
         <br>
-        <br>
         
         <section>
             <div class="mainwrapper">
                 <div class="leftpanel">
                     <div class="media profile-left">
-                        <a class="pull-left profile-thumb" href="profile.html">
-                            <img class="img-circle" src="images/photos/user1.png" alt="">
+                        <a class="pull-left profile-thumb" href="profil.html">
+                            <img class="img-circle" src="images/photos/souka.png" alt="">
                         </a>
                         <div class="media-body">
-                            <h4 class="media-heading">Rhanim Rida</h4>
-                            <small class="text-muted">Webmaster</small>
+                            <h4 class="media-heading">HAJI Soukaina</h4>
+                            <small class="text-muted">Développeur</small>
                         </div>
                     </div><!-- media -->
                     
+<!--
                     <h5 class="leftpanel-title">Navigation</h5>
-                    <ul class="nav nav-pills nav-stacked">
+-->
+                   <ul class="nav nav-pills nav-stacked">
                         
-                        <li class="parent active"><a href="#"><i class="fa fa-tachometer"></i> <span>Administrateurs</span></a>
+                        <li class="parent active"><a href="#"><i class="fa fa-user"></i> <span>Utilisateurs</span></a>
                             <ul class="children">
-                                <li><a href="#">Liste des administrateurs</a></li>
-                                <li class="active"><a href="#">Ajouter administrateur</a></li>
+                                <li class="active"><a href="#"> Liste des utilisateurs</a></li>
+                                <li><a href="ajouter_utilisateur.html">Ajout d'un utilisateur</a></li>
                             </ul>
                         </li>
 
-                        <li class="parent"><a href="#"><i class="fa fa-graduation-cap"></i> <span>Etudiants</span></a>
+                        <li class="parent"><a href="flux.html"><i class="fa fa-rss"></i> <span>Flux</span></a>
                             <ul class="children">
-                                <li><a href="#">Liste des etudiants</a></li>
-                                <li><a href="#">Ajouter etudiant</a></li>
+                                <li><a href="flux.html">Liste des flux</a></li>
+                                <li><a href="ajouter_flux.html">Ajout d'un flux</a></li>
                             </ul>
                         </li>
 
-                        <li class="parent"><a href="#"><i class="fa fa-suitcase"></i> <span>Salles</span></a>
+                        <li class="parent"><a href="relations.html"><i class="fa fa-link"></i> <span>Relations</span></a>
                             <ul class="children">
-                                <li><a href="#">Liste des salles</a></li>
-                                <li><a href="#">Ajouter salle</a></li>
+                                <li><a href="relations.html">Liste des relations</a></li>
+                                <li><a href="ajouter_relation.html">Ajout d'une relation</a></li>
                             </ul>
                         </li>
-						
-						<li class="parent"><a href="#"><i class="fa fa-calendar"></i> <span>Reservation</span></a>
-                            <ul class="children">
-                                <li><a href="#">Reservation des espaces</a></li>
-                                <li><a href="ReservationMateriels.html">Reservation des materiels</a></li>
-                            </ul>
-                        </li>
-                        
-                        <li><a href="messages.html"><span class="pull-right badge">13</span><i class="fa fa-bullhorn"></i> <span>Reclamations</span></a></li>
-
-
-                        <li><a href="messages.html"><span class="pull-right badge">20</span><i class="fa fa-file-text-o"></i> <span>Documents</span></a></li>
-
-						
-                        <li><a href="messages.html"><span class="pull-right badge">5</span><i class="fa fa-phone"></i> <span>Plaintes</span></a></li>
-                        
 
                     </ul>
                     
@@ -157,15 +143,14 @@
                     <div class="pageheader">
                         <div class="media">
                             <div class="pageicon pull-left">
-                                <i class="fa fa-calendar"></i>
+                                <i class="fa fa-user"></i>
                             </div>
                             <div class="media-body">
                                 <ul class="breadcrumb">
                                     <li><a href="#"><i class="glyphicon glyphicon-home"></i></a></li>
-                                    <li><a href="#">Réservations</a></li>
-                                    <li>Les réservations</li>
+                                    <li><a href="utilisateurs.html">Utilisateurs</a></li>
                                 </ul>
-                                <h4>Les réservations</h4>
+                                <h4>Liste des utilisateurs</h4>
                             </div>
                         </div><!-- media -->
                     </div><!-- pageheader -->
