@@ -11,7 +11,6 @@
         <title>BIGDIG admin</title>
 
         <link href="css/style.default.css" rel="stylesheet">
-        <link href="css/select2.css" rel="stylesheet" />
 
         <!-- HTML5 shim and Respond.js IE8 support of HTML5 elements and media queries -->
         <!--[if lt IE 9]>
@@ -25,7 +24,7 @@
         <header>
             <div class="headerwrapper">
                 <div class="header-left">
-                    <a href="apropos.html" class="logo">
+                    <a href="apropos.php" class="logo">
                         <!--<img src="images/minilogo1.png" alt="" /> -->
                         <p style="color:white;">BIGDIG</p>
                     </a>
@@ -38,16 +37,16 @@
                 
                 <div class="header-right">
                     
-                    <div class="pull-right">                       
+                    <div class="pull-right">                        
                                                 
                         <div class="btn-group btn-group-option">
                             <button type="button" class="btn btn-default dropdown-toggle" data-toggle="dropdown">
                               <i class="fa fa-caret-down"></i>
                             </button>
                             <ul class="dropdown-menu pull-right" role="menu">
-                              <li><a href="profil.html"><i class="glyphicon glyphicon-user"></i> Afficher mon profil</a></li>
+                              <li><a href="profil.php"><i class="glyphicon glyphicon-user"></i> Afficher mon profil</a></li>
                               <li class="divider"></li>
-                              <li><a href="signin.html"><i class="glyphicon glyphicon-log-out"></i>Déconnexion</a></li>
+                              <li><a href="signin.php"><i class="glyphicon glyphicon-log-out"></i>Déconnexion</a></li>
                             </ul>
                         </div><!-- btn-group -->
                         
@@ -63,7 +62,7 @@
             <div class="mainwrapper">
                 <div class="leftpanel">
                     <div class="media profile-left">
-                        <a class="pull-left profile-thumb" href="profil.html">
+                        <a class="pull-left profile-thumb" href="profil.php">
                             <img class="img-circle" src="images/photos/souka.png" alt="">
                         </a>
                         <div class="media-body">
@@ -73,26 +72,26 @@
                     </div><!-- media -->
                     
                     
-					<ul class="nav nav-pills nav-stacked">
+                    <ul class="nav nav-pills nav-stacked">
                         
-                        <li class="parent"><a href="utilisateurs.html"><i class="fa fa-user"></i> <span>Utilisateurs</span></a>
+                        <li class="parent active"><a href="#"><i class="fa fa-user"></i> <span>Utilisateurs</span></a>
                             <ul class="children">
-                                <li><a href="utilisateurs.html"> Liste des utilisateurs</a></li>
-                                <li><a href="ajouter_utilisateur.html">Ajouter un utilisateur</a></li>
+                                <li><a href="utilisateurs.php"> Liste des utilisateurs</a></li>
+                                <li class="active"><a href="#">Ajout d'un utilisateur</a></li>
                             </ul>
                         </li>
 
-                        <li class="parent"><a href="#"><i class="fa fa-rss"></i> <span>Flux</span></a>
+                        <li class="parent"><a href="flux.php"><i class="fa fa-rss"></i> <span>Flux</span></a>
                             <ul class="children">
-                                <li><a href="flux.html">Liste des flux</a></li>
-                                <li><a href="ajouter_flux.html">Ajouter un flux</a></li>
+                                <li><a href="flux.php">Liste des flux</a></li>
+                                <li><a href="ajouter_flux.php">Ajout d'un flux</a></li>
                             </ul>
                         </li>
 
-                        <li class="parent active"><a href="relations.html"><i class="fa fa-link"></i> <span>Relations</span></a>
+                        <li class="parent"><a href="relations.php"><i class="fa fa-link"></i> <span>Relations</span></a>
                             <ul class="children">
-                                <li class="active"><a href="relations.html">Liste des relations</a></li>
-                                <li><a href="ajouter_relation.html">Ajouter relation</a></li>
+                                <li><a href="relations.php">Liste des relations</a></li>
+                                <li><a href="ajouter_relation.php">Ajout d'une relation</a></li>
                             </ul>
                         </li>
 
@@ -104,22 +103,21 @@
                     <div class="pageheader">
                         <div class="media">
                             <div class="pageicon pull-left">
-                                <i class="fa fa-rss"></i>
+                                <i class="fa fa-user"></i>
                             </div>
                             <div class="media-body">
                                 <ul class="breadcrumb">
                                     <li><a href="#"><i class="glyphicon glyphicon-home"></i></a></li>
-                                    <li><a href="flux.html">Flux</a></li>
+                                    <li><a href="utilisateurs.php">Utilisateurs</a></li>
                                 </ul>
-                                <h4>Modification d'un flux</h4>
+                                <h4>Ajout d'un utilisateur</h4>
                             </div>
                         </div><!-- media -->
                     </div><!-- pageheader -->
                     
                     <div class="contentpanel">
                         
-                        
-                        
+
                         <div class="row">
                             
                             <div class="col-md-12"> 
@@ -129,42 +127,45 @@
                                             <a href="#" class="panel-minimize tooltips" data-toggle="tooltip" title="Minimize Panel"><i class="fa fa-minus"></i></a>
                                             <a href="#" class="panel-close tooltips" data-toggle="tooltip" title="Close Panel"><i class="fa fa-times"></i></a>
                                         </div>--><!-- panel-btns -->
-                                        <h4 class="panel-title">Modifier un flux</h4>
+                                        <h4 class="panel-title">Ajouter un utilisateur</h4>
                                     </div>
                                     <div class="panel-body">
-                                  
                                         <div class="row">
                                             <div class="col-sm-6">
                                                 <div class="form-group">
-                                                    <p class="mb20">Utilisateur</p>
-                                                    <select id="select-templating" data-placeholder="Choose One" class="width300">
-                                                        <option value="">Choose One</option>
-                                                        <option value="facebook">User1</option>
-                                                        <option value="twitter">User2</option>
-                                                        <option value="pinterest">User3</option>
-                                                        <option value="youtube">User4</option>
-                                                        <option value="linkedin">User5</option>
-                                                    </select>
+                                                    <label class="control-label">Nom</label>
+                                                    <input type="text" name="nom" class="form-control" />
                                                 </div><!-- form-group -->
                                             </div><!-- col-sm-6 -->
                                             
                                             <div class="col-sm-6">
                                                 <div class="form-group">
-                                                    <p class="mb20">Flux</p>
-                                                    <select id="select-templating1" data-placeholder="Choose One" class="width300">
-                                                        <option value="">Choose One</option>
-                                                        <option value="facebook">Flux1</option>
-                                                        <option value="twitter">Flux2</option>
-                                                        <option value="pinterest">Flux3</option>
-                                                        <option value="youtube">Flux4</option>
-                                                        <option value="linkedin">Flux5</option>
-                                                    </select>
+                                                    <label class="control-label">Prenom</label>
+                                                    <input type="text" name="prenom" class="form-control" />
                                                 </div><!-- form-group -->
                                             </div><!-- col-sm-6 -->
                                         </div><!-- row -->
+                                  
+                                        <div class="row">
+                                            <div class="col-sm-6">
+                                                <div class="form-group">
+                                                    <label class="control-label">Nom d'utilisateur</label>
+                                                    <input type="text" name="nom_utilisateur" class="form-control" />
+                                                </div><!-- form-group -->
+                                            </div><!-- col-sm-6 -->
+                                            
+                                            <div class="col-sm-6">
+                                                <div class="form-group">
+                                                    <label class="control-label">Email</label>
+                                                    <input type="email" name="email" class="form-control" />
+                                                </div><!-- form-group -->
+                                            </div><!-- col-sm-6 -->
+                                        </div><!-- row -->
+
+                                        
                                     </div><!-- panel-body -->
                                     <div class="panel-footer">
-                                        <button class="btn btn-primary">Modifier</button>
+                                        <button class="btn btn-primary">Ajouter</button>
                                         <button type="reset" class="btn btn-default">Annuler</button>
                                     </div><!-- panel-footer -->
                                 </div><!-- panel -->
@@ -186,42 +187,8 @@
         <script src="js/pace.min.js"></script>
         <script src="js/retina.min.js"></script>
         <script src="js/jquery.cookies.js"></script>
-        <script src="js/select2.min.js"></script>
 
         <script src="js/custom.js"></script>
-        <script>
-            jQuery(document).ready(function(){
-
-                              // Select2
-                jQuery("#select-basic, #select-multi").select2();
-                jQuery('#select-search-hide').select2({
-                    minimumResultsForSearch: -1
-                });
-                
-                function format(item) {
-                    return '<i class="fa ' + ((item.element[0].getAttribute('rel') === undefined)?"":item.element[0].getAttribute('rel') ) + ' mr10"></i>' + item.text;
-                }
-                
-                // This will empty first option in select to enable placeholder
-                jQuery('select option:first-child').text('');
-                
-                jQuery("#select-templating1").select2({
-                    formatResult: format,
-                    formatSelection: format,
-                    escapeMarkup: function(m) { return m; }
-                });
-                
-                jQuery("#select-templating").select2({
-                    formatResult: format,
-                    formatSelection: format,
-                    escapeMarkup: function(m) { return m; }
-                });
-                
-            });
-            
-          
-        </script>
-
 
     </body>
 

@@ -54,7 +54,7 @@
                                 </div>
                             </div>
                             <div class="pull-right">
-                                <a href="utilisateurs.html" class="btn btn-success">Connexion <i class="fa fa-angle-right ml5"></i></a>
+                                <a href="utilisateurs.php" class="btn btn-success">Connexion <i class="fa fa-angle-right ml5"></i></a>
                             </div>
                         </div>                      
                     </form>

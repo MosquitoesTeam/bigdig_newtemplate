@@ -28,7 +28,7 @@
         <header>
             <div class="headerwrapper">
                 <div class="header-left">
-                    <a href="apropos.html" class="logo">
+                    <a href="apropos.php" class="logo">
                         <!--<img src="images/minilogo1.png" alt="" /> -->
                         <p style="color:white;">BIGDIG</p>
                     </a>
@@ -47,9 +47,9 @@
                               <i class="fa fa-caret-down"></i>
                             </button>
                             <ul class="dropdown-menu pull-right" role="menu">
-                              <li><a href="profil.html"><i class="glyphicon glyphicon-user"></i> Afficher mon profil</a></li>
+                              <li><a href="profil.php"><i class="glyphicon glyphicon-user"></i> Afficher mon profil</a></li>
                               <li class="divider"></li>
-                              <li><a href="signin.html"><i class="glyphicon glyphicon-log-out"></i>Déconnexion</a></li>
+                              <li><a href="signin.php"><i class="glyphicon glyphicon-log-out"></i>Déconnexion</a></li>
                             </ul>
                         </div><!-- btn-group -->
                         
@@ -65,7 +65,7 @@
             <div class="mainwrapper">
                 <div class="leftpanel">
                     <div class="media profile-left">
-                        <a class="pull-left profile-thumb" href="profil.html">
+                        <a class="pull-left profile-thumb" href="profil.php">
                             <img class="img-circle" src="images/photos/souka.png" alt="">
                         </a>
                         <div class="media-body">
@@ -82,21 +82,21 @@
                         <li class="parent active"><a href="#"><i class="fa fa-user"></i> <span>Utilisateurs</span></a>
                             <ul class="children">
                                 <li class="active"><a href="#"> Liste des utilisateurs</a></li>
-                                <li><a href="ajouter_utilisateur.html">Ajout d'un utilisateur</a></li>
+                                <li><a href="ajouter_utilisateur.php">Ajout d'un utilisateur</a></li>
                             </ul>
                         </li>
 
-                        <li class="parent"><a href="flux.html"><i class="fa fa-rss"></i> <span>Flux</span></a>
+                        <li class="parent"><a href="flux.php"><i class="fa fa-rss"></i> <span>Flux</span></a>
                             <ul class="children">
-                                <li><a href="flux.html">Liste des flux</a></li>
-                                <li><a href="ajouter_flux.html">Ajout d'un flux</a></li>
+                                <li><a href="flux.php">Liste des flux</a></li>
+                                <li><a href="ajouter_flux.php">Ajout d'un flux</a></li>
                             </ul>
                         </li>
 
-                        <li class="parent"><a href="relations.html"><i class="fa fa-link"></i> <span>Relations</span></a>
+                        <li class="parent"><a href="relations.php"><i class="fa fa-link"></i> <span>Relations</span></a>
                             <ul class="children">
-                                <li><a href="relations.html">Liste des relations</a></li>
-                                <li><a href="ajouter_relation.html">Ajout d'une relation</a></li>
+                                <li><a href="relations.php">Liste des relations</a></li>
+                                <li><a href="ajouter_relation.php">Ajout d'une relation</a></li>
                             </ul>
                         </li>
 
@@ -113,7 +113,7 @@
                             <div class="media-body">
                                 <ul class="breadcrumb">
                                     <li><a href="#"><i class="glyphicon glyphicon-home"></i></a></li>
-                                    <li><a href="utilisateurs.html">Utilisateurs</a></li>
+                                    <li><a href="utilisateurs.php">Utilisateurs</a></li>
                                 </ul>
                                 <h4>Liste des utilisateurs</h4>
                             </div>
@@ -152,7 +152,7 @@
                                         </td>
                                         
                                         <td>
-                                            <a class="btn btn-primary fa fa-edit" href="modif_utilisateur.html">
+                                            <a class="btn btn-primary fa fa-edit" href="modif_utilisateur.php">
                                             </a>
                                         </td>
                                         <td>

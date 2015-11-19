@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="fr">
 
 
 <head>
@@ -14,8 +14,9 @@
         <link href="css/select2.css" rel="stylesheet" />
         <link href="css/style.datatables.css" rel="stylesheet">
         <link href="cdn.datatables.net/responsive/1.0.1/css/dataTables.responsive.css" rel="stylesheet">
+        <link href="css/colorpicker.css" rel="stylesheet" />
 
-        <!-- HTML5 shim and Respond.js IE8 support of HTML5 elements and media queries -->
+        <!-- php5 shim and Respond.js IE8 support of HTML5 elements and media queries -->
         <!--[if lt IE 9]>
         <script src="js/html5shiv.js"></script>
         <script src="js/respond.min.js"></script>
@@ -27,7 +28,7 @@
         <header>
             <div class="headerwrapper">
                 <div class="header-left">
-                    <a href="apropos.html" class="logo">
+                    <a href="apropos.php" class="logo">
                         <!--<img src="images/minilogo1.png" alt="" /> -->
                         <p style="color:white;">BIGDIG</p>
                     </a>
@@ -40,16 +41,17 @@
                 
                 <div class="header-right">
                     
-                    <div class="pull-right">                       
+                    <div class="pull-right">
+                        
                                                 
                         <div class="btn-group btn-group-option">
                             <button type="button" class="btn btn-default dropdown-toggle" data-toggle="dropdown">
                               <i class="fa fa-caret-down"></i>
                             </button>
                             <ul class="dropdown-menu pull-right" role="menu">
-                              <li><a href="profil.html"><i class="glyphicon glyphicon-user"></i> Afficher mon profil</a></li>
+                              <li><a href="profil.php"><i class="glyphicon glyphicon-user"></i> Afficher mon profil</a></li>
                               <li class="divider"></li>
-                              <li><a href="signin.html"><i class="glyphicon glyphicon-log-out"></i>Déconnexion</a></li>
+                              <li><a href="signin.php"><i class="glyphicon glyphicon-log-out"></i>Déconnexion</a></li>
                             </ul>
                         </div><!-- btn-group -->
                         
@@ -65,7 +67,7 @@
             <div class="mainwrapper">
                 <div class="leftpanel">
                     <div class="media profile-left">
-                        <a class="pull-left profile-thumb" href="profil.html">
+                        <a class="pull-left profile-thumb" href="profil.php">
                             <img class="img-circle" src="images/photos/souka.png" alt="">
                         </a>
                         <div class="media-body">
@@ -79,24 +81,24 @@
 -->
                    <ul class="nav nav-pills nav-stacked">
                         
-                        <li class="parent"><a href="utilisateurs.html"><i class="fa fa-user"></i> <span>Utilisateurs</span></a>
+                        <li class="parent"><a href="utilisateurs.php"><i class="fa fa-user"></i> <span>Utilisateurs</span></a>
                             <ul class="children">
-                                <li><a href="utilisateurs.html"> Liste des utilisateurs</a></li>
-                                <li><a href="ajouter_utilisateur.html">Ajouter un utilisateur</a></li>
+                                <li><a href="utilisateurs.php"> Liste des utilisateurs</a></li>
+                                <li><a href="ajouter_utilisateur.php">Ajouter un utilisateur</a></li>
                             </ul>
                         </li>
 
-                        <li class="parent "><a href="flux.html"><i class="fa fa-rss"></i> <span>Flux</span></a>
+                        <li class="parent active"><a href="#"><i class="fa fa-rss"></i> <span>Flux</span></a>
                             <ul class="children">
-                                <li><a href="flux.html">Liste des flux</a></li>
-                                <li><a href="ajouter_flux.html">Ajouter un flux</a></li>
+                                <li class="active"><a href="#">Liste des flux</a></li>
+                                <li><a href="ajouter_flux.php">Ajouter un flux</a></li>
                             </ul>
                         </li>
 
-                        <li class="parent active"><a href="#"><i class="fa fa-link"></i> <span>Relations</span></a>
+                        <li class="parent"><a href="relations.php"><i class="fa fa-link"></i> <span>Relations</span></a>
                             <ul class="children">
-                                <li class="active"><a href="#">Liste des relations</a></li>
-                                <li><a href="ajouter_relation.html">Ajouter relation</a></li>
+                                <li><a href="relations.php">Liste des relations</a></li>
+                                <li><a href="ajouter_relation.php">Ajouter relation</a></li>
                             </ul>
                         </li>
 
@@ -108,14 +110,14 @@
                     <div class="pageheader">
                         <div class="media">
                             <div class="pageicon pull-left">
-                                <i class="fa fa-link"></i>
+                                <i class="fa fa-rss"></i>
                             </div>
                             <div class="media-body">
                                 <ul class="breadcrumb">
                                     <li><a href="#"><i class="glyphicon glyphicon-home"></i></a></li>
-                                    <li><a href="relations.html">Relations</a></li>
+                                    <li><a href="flux.php">Flux</a></li>
                                 </ul>
-                                <h4>Liste des relations</h4>
+                                <h4>Liste des flux</h4>
                             </div>
                         </div><!-- media -->
                     </div><!-- pageheader -->
@@ -129,8 +131,10 @@
                                 <thead class="">
                                     <tr>
                                         <th>ID</th>
-                                        <th>Utilisateur</th>
-                                        <th>Flux</th>
+                                        <th>Title</th>
+                                        <th>URL</th>
+                                        <th>Couleur</th>
+                                        <th>Type de flux</th>
                                         <th>Éditer</th>
                                         <th>Supprimer</th>
                                     </tr>
@@ -139,10 +143,16 @@
                                 <tbody>
                                     <tr>
                                         <td>#1</td>
-                                        <td>Rhanim</td>
                                         <td>HESPRESS</td>
+                                        <td><a href="http://www.hespress.com/feed/index.rss">http://www.hespress.com/feed/index.rss</a></td>
+                                        <td><a class="btn btn-primary" style="background: #FFC0CB;">#FFC0CB
+                                            </a>
+                                        </td>
                                         <td>
-                                            <a class="btn btn-primary fa fa-edit" href="modif_relation.html">
+                                            Interne
+                                        </td>
+                                         <td>
+                                            <a class="btn btn-primary fa fa-edit" href="modif_flux.php">
                                             </a>
                                         </td>
                                         <td>
@@ -153,10 +163,17 @@
 
                                     <tr>
                                         <td>#2</td>
-                                        <td>Soukaina</td>
                                         <td>chouftv</td>
+                                        <td><a href="http://chouftv.ma/feed/index.rss">http://chouftv.ma/feed/index.rss</a></td>
                                         <td>
-                                            <a class="btn btn-primary fa fa-edit" href="modif_relation.html">
+                                            <a class="btn btn-primary" style="background: #7FD4FF;cursor:auto;">#7FD4FF
+                                            </a>
+                                        </td>
+                                        <td>
+                                            Externe
+                                        </td>
+                                         <td>
+                                            <a class="btn btn-primary fa fa-edit" href="modif_flux.php">
                                             </a>
                                         </td>
                                         <td>
@@ -177,7 +194,7 @@
             </div><!-- mainwrapper -->
         </section>
 
-  <script src="js/jquery-1.11.1.min.js"></script>
+        <script src="js/jquery-1.11.1.min.js"></script>
         <script src="js/jquery-migrate-1.2.1.min.js"></script>
         <script src="js/bootstrap.min.js"></script>
         <script src="js/modernizr.min.js"></script>
