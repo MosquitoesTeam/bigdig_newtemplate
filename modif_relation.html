@@ -11,7 +11,7 @@
         <title>BIGDIG admin</title>
 
         <link href="css/style.default.css" rel="stylesheet">
-        <link href="css/colorpicker.css" rel="stylesheet" />
+        <link href="css/select2.css" rel="stylesheet" />
 
         <!-- HTML5 shim and Respond.js IE8 support of HTML5 elements and media queries -->
         <!--[if lt IE 9]>
@@ -82,16 +82,16 @@
                             </ul>
                         </li>
 
-                        <li class="parent active"><a href="#"><i class="fa fa-rss"></i> <span>Flux</span></a>
+                        <li class="parent"><a href="#"><i class="fa fa-rss"></i> <span>Flux</span></a>
                             <ul class="children">
                                 <li><a href="flux.html">Liste des flux</a></li>
-                                <li class="active"><a href="#">Ajouter un flux</a></li>
+                                <li><a href="ajouter_flux.html">Ajouter un flux</a></li>
                             </ul>
                         </li>
 
-                        <li class="parent"><a href="relations.html"><i class="fa fa-link"></i> <span>Relations</span></a>
+                        <li class="parent active"><a href="relations.html"><i class="fa fa-link"></i> <span>Relations</span></a>
                             <ul class="children">
-                                <li><a href="relations.html">Liste des relations</a></li>
+                                <li class="active"><a href="relations.html">Liste des relations</a></li>
                                 <li><a href="ajouter_relation.html">Ajouter relation</a></li>
                             </ul>
                         </li>
@@ -111,7 +111,7 @@
                                     <li><a href="#"><i class="glyphicon glyphicon-home"></i></a></li>
                                     <li><a href="flux.html">Flux</a></li>
                                 </ul>
-                                <h4>Ajout d'un flux</h4>
+                                <h4>Modification d'un flux</h4>
                             </div>
                         </div><!-- media -->
                     </div><!-- pageheader -->
@@ -129,54 +129,42 @@
                                             <a href="#" class="panel-minimize tooltips" data-toggle="tooltip" title="Minimize Panel"><i class="fa fa-minus"></i></a>
                                             <a href="#" class="panel-close tooltips" data-toggle="tooltip" title="Close Panel"><i class="fa fa-times"></i></a>
                                         </div>--><!-- panel-btns -->
-                                        <h4 class="panel-title">Ajouter un flux</h4>
+                                        <h4 class="panel-title">Modifier un flux</h4>
                                     </div>
-                                                                            <div class="panel-body">
-                                        <div class="row">
-                                            <div class="col-sm-6">
-                                                <div class="form-group">
-                                                    <label class="control-label">Titre</label>
-                                                    <input type="text" name="titre" class="form-control" />
-                                                </div><!-- form-group -->
-                                            </div><!-- col-sm-6 -->
-                                            
-                                            <div class="col-sm-6">
-                                                <div class="form-group">
-                                                    <label class="control-label">URL</label>
-                                                    <input type="text" name="url" class="form-control" />
-                                                </div><!-- form-group -->
-                                            </div><!-- col-sm-6 -->
-                                        </div><!-- row -->
+                                    <div class="panel-body">
                                   
                                         <div class="row">
                                             <div class="col-sm-6">
                                                 <div class="form-group">
-                                                    <label class="control-label">Coleur</label>
-                                                    <input name="colorpicker" class="form-control colorpicker-input" placeholder="#000000" id="colorpicker" type="text">
-                                                    <span id="colorSelector" class="colorselector">
-                                            <span style="background-color: rgb(158, 74, 74);"></span>
-                                        </span>
+                                                    <p class="mb20">Utilisateur</p>
+                                                    <select id="select-templating" data-placeholder="Choose One" class="width300">
+                                                        <option value="">Choose One</option>
+                                                        <option value="facebook">User1</option>
+                                                        <option value="twitter">User2</option>
+                                                        <option value="pinterest">User3</option>
+                                                        <option value="youtube">User4</option>
+                                                        <option value="linkedin">User5</option>
+                                                    </select>
                                                 </div><!-- form-group -->
                                             </div><!-- col-sm-6 -->
                                             
                                             <div class="col-sm-6">
                                                 <div class="form-group">
-                                                    <label class="control-label">Type de flux</label>
-                                                    <div class="rdio rdio-primary">
-                                                        <input id="interne" value="i" name="typeflux" required="" type="radio">
-                                                        <label for="interne">Interne</label>
-                                                    </div><!-- rdio -->
-                                                    <div class="rdio rdio-primary">
-                                                        <input value="e" id="externe" name="typeflux" type="radio">
-                                                        <label for="externe">Externe</label>
-                                                    </div><!-- rdio -->
+                                                    <p class="mb20">Flux</p>
+                                                    <select id="select-templating1" data-placeholder="Choose One" class="width300">
+                                                        <option value="">Choose One</option>
+                                                        <option value="facebook">Flux1</option>
+                                                        <option value="twitter">Flux2</option>
+                                                        <option value="pinterest">Flux3</option>
+                                                        <option value="youtube">Flux4</option>
+                                                        <option value="linkedin">Flux5</option>
+                                                    </select>
                                                 </div><!-- form-group -->
                                             </div><!-- col-sm-6 -->
                                         </div><!-- row -->
-
                                     </div><!-- panel-body -->
                                     <div class="panel-footer">
-                                        <button class="btn btn-primary">Ajouter</button>
+                                        <button class="btn btn-primary">Modifier</button>
                                         <button type="reset" class="btn btn-default">Annuler</button>
                                     </div><!-- panel-footer -->
                                 </div><!-- panel -->
@@ -198,43 +186,43 @@
         <script src="js/pace.min.js"></script>
         <script src="js/retina.min.js"></script>
         <script src="js/jquery.cookies.js"></script>
-
-        <script src="js/colorpicker.js"></script>
+        <script src="js/select2.min.js"></script>
 
         <script src="js/custom.js"></script>
-        
         <script>
-        jQuery(document).ready(function() {
-             
-                // Color Picker
-                if(jQuery('#colorpicker').length > 0) {
-                    jQuery('#colorSelector').ColorPicker({
-			onShow: function (colpkr) {
-			    jQuery(colpkr).fadeIn(500);
-                            return false;
-			},
-			onHide: function (colpkr) {
-                            jQuery(colpkr).fadeOut(500);
-                            return false;
-			},
-			onChange: function (hsb, hex, rgb) {
-			    jQuery('#colorSelector span').css('backgroundColor', '#' + hex);
-			    jQuery('#colorpicker').val('#'+hex);
-			}
-                    });
-                }
-  
-                // Color Picker Flat Mode
-                jQuery('#colorpickerholder').ColorPicker({
-                    flat: true,
-                    onChange: function (hsb, hex, rgb) {
-			jQuery('#colorpicker3').val('#'+hex);
-                    }
+            jQuery(document).ready(function(){
+
+                              // Select2
+                jQuery("#select-basic, #select-multi").select2();
+                jQuery('#select-search-hide').select2({
+                    minimumResultsForSearch: -1
                 });
                 
+                function format(item) {
+                    return '<i class="fa ' + ((item.element[0].getAttribute('rel') === undefined)?"":item.element[0].getAttribute('rel') ) + ' mr10"></i>' + item.text;
+                }
+                
+                // This will empty first option in select to enable placeholder
+                jQuery('select option:first-child').text('');
+                
+                jQuery("#select-templating1").select2({
+                    formatResult: format,
+                    formatSelection: format,
+                    escapeMarkup: function(m) { return m; }
+                });
+                
+                jQuery("#select-templating").select2({
+                    formatResult: format,
+                    formatSelection: format,
+                    escapeMarkup: function(m) { return m; }
+                });
                 
             });
+            
+          
         </script>
+
+
     </body>
 
 <!-- Mirrored from themepixels.com/demo/webpage/chain/form-layouts.html by HTTrack Website Copier/3.x [XR&CO'2014], Sat, 09 May 2015 14:11:25 GMT -->
